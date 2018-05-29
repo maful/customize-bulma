@@ -26,14 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // window.onscroll = function() {
 //   console.log(window.pageYOffset);
 // };
-// $(window).scroll(function(){
-//   if ($(window).scrollTop() >= 210) {
-//     $('nav').addClass('is-fixed-top');
-//     // $('nav').removeClass('is-transparent');
-//     $('nav').addClass('is-primary');
-//   }
-//   else {
-//     $('nav').removeClass('is-fixed-top');
-//     $('nav').removeClass('is-primary');
-//   }
-// });
+$(window).scroll(function(){
+  if ($(window).scrollTop() > 0) {
+    $('nav.navbar').addClass('sticky');
+    // $('nav').removeClass('is-transparent');
+    // $('nav').addClass('is-primary');
+  } else {
+    $('nav.navbar').removeClass('sticky');
+  }
+});
